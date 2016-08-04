@@ -14,10 +14,10 @@ rm ~/arduino-1.6.10-linuxarm.tar.xz
 cp autoreset2560 ~/arduino-1.6.10/hardware/tools/avr/bin/
 cp autoreset328 ~/arduino-1.6.10/hardware/tools/avr/bin/
 cp avrdude-autoreset ~/arduino-1.6.10/hardware/tools/avr/bin/
-sudo mv ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude-orriginal
+sudo mv ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude-original
 sudo ln -s ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude-autoreset ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude
 
 
-sudo chmod +X ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude
-sudo chmod +X ~/arduino-1.6.10/hardware/tools/avr/bin/autoreset328
-sudo chmod +X ~/arduino-1.6.10/hardware/tools/avr/bin/autoreset2560
+sudo chmod +x ~/arduino-1.6.10/hardware/tools/avr/bin/avrdude
+sudo chmod +x ~/arduino-1.6.10/hardware/tools/avr/bin/autoreset328
+sudo chmod +x ~/arduino-1.6.10/hardware/tools/avr/bin/autoreset2560
