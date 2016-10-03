@@ -1,13 +1,40 @@
 #!/bin/bash
+
+
+# 'avrdude-autoreset'
+#Changes by Michael Langeder, Austria
+#on Oct. 3rd 2016
+#under Apache 2.0, January 2004
+#
+#
+#http://langeder.org
+#info@langeder.org
+#
+#
+###########################################################
+#
+#Initial scripts by Protoneer from his github repository
+#
+#http://info.protoneer.co.nz/
+#http://blog.protoneer.co.nz/
+#http://protoneer.co.nz/
+#https://github.com/Protoneer/RaspberryPi-Arduino-avrdude-rpi
+
+
+
+
+
+source hardware/tools/avr/bin/config.cfg
+
 if [[ $@ == *atmega2560* && $@ == */dev/ttyAMA0* ]]
 then
   echo "RPI-ATMega2560";
-  sudo strace -o "|/home/pi/arduino-1.6.10/hardware/tools/avr/bin/autoreset2560" -eioctl /home/pi/arduino-1.6.10/hardware/tools/avr/bin/avrdude-original $@
+  sudo strace -o "|$LOCATION/arduino-$VERSION/hardware/tools/avr/bin/autoreset2560" -eioctl $LOCATION/arduino-$VERSION/hardware/tools/avr/bin/avrdude-original $@
 elif [[ $@ == *atmega328* && $@ == */dev/ttyAMA0* ]]
 then
   echo "RPI-ATMega328";
-  sudo strace -o "|/home/pi/arduino-1.6.10/hardware/tools/avr/bin/autoreset328" -eioctl /home/pi/arduino-1.6.10/hardware/tools/avr/bin/avrdude-original $@
+  sudo strace -o "|$LOCATION/arduino-$VERSION/hardware/tools/avr/bin/autoreset328" -eioctl $LOCATION/arduino-$VERSION/hardware/tools/avr/bin/avrdude-original $@
 else
-  sudo /home/pi/arduino-1.6.10/hardware/tools/avr/bin/avrdude-original $@
+  sudo $LOCATION/arduino-$VERSION/hardware/tools/avr/bin/avrdude-original $@
 fi
 
