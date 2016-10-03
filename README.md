@@ -6,6 +6,15 @@ under Apache 2.0, January 2004
 http://langeder.org
 info@langeder.org
 
+### config.cfg
+contains variable definitions,
+edit them to fit your setup
+
+### InstallArduino.sh
+downloads, installs and modifies the Arduino IDE,
+so that it can be used to program the Protoneer Mega Pi Hat directly over GPIO
+also calls Setup_RPI3_Serial.sh if RPI_VERSION=3
+
 
 ###########################################################
 
