@@ -34,5 +34,9 @@ Installed Arduino 1.6.10 with avrdude-rpi in place. (For programming Atmega328 /
 Sets up the the serial pins to point to /dev/ttyAMA0 like on older RPi's. (Only needed for Raspberry Pi 3's) 
 
 ###########################################################
-
+### To Install: ###
+cd ~
+git clone https://github.com/Protoneer/RaspberryPi-Arduino-avrdude-rpi.git
+cd RaspberryPi-Arduino-avrdude-rpi
+./InstallArduino.sh
 
