@@ -35,8 +35,9 @@ Sets up the the serial pins to point to /dev/ttyAMA0 like on older RPi's. (Only 
 
 ###########################################################
 ### To Install: ###
+```
 cd ~
 git clone https://github.com/Protoneer/RaspberryPi-Arduino-avrdude-rpi.git
 cd RaspberryPi-Arduino-avrdude-rpi
 ./InstallArduino.sh
-
+```
